@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
@@ -72,7 +71,7 @@ img {
   border-radius: 0.8rem;
   margin-inline: 1.5rem;
   padding: 2.5rem 1.5rem;
-  position: absolute;
+  position: relative;
 }
 
 .login-title {
@@ -90,4 +89,115 @@ img {
 .login-content {
   margin-bottom: 1.5rem;
   row-gap: 1.75rem;
+}
+
+.login-box {
+  border-bottom: 2px solid var(--white-color);
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: .75rem;
+}
+
+.login-icon,
+.login-eye {
+  font-size: 1.25rem;
+}
+
+.login-input {
+  background: none;
+  color: var(--white-color);
+  padding-block: .8rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.login-box-input {
+  position: relative;
+}
+
+.login-label {
+  font-weight: var(--medium-font);
+  left: 0;
+  top: 13px;
+  position: absolute;
+  transition: top .3s, font-size .3s;
+}
+
+.login-eye {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+}
+
+.login-box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+
+.login-check,
+.login-check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login-check {
+  margin-bottom: 1.5rem;
+}
+
+.login-check-label,
+.login-forgot,
+.login-register {
+  font-size: var(--small-font-size);
+}
+
+.login-check-group {
+  column-gap: .5rem;
+}
+
+.login-check-input {
+  height: 16px;
+  width: 16px;
+}
+
+.login-forgot {
+  color: var(--white-color);
+}
+
+.login-forgot:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  background-color: var(--white-color);
+  border-radius: .3rem;
+  cursor: pointer;
+  font-weight: var(--medium-font);
+  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.login-register {
+  text-align: center;
+}
+
+.login-register a {
+  color: var(--white-color);
+  font-weight: var(--medium-font);
+}
+
+.login-register a:hover {
+  text-decoration: underline;
+}
+
+.login-input:focus + .login-label {
+  font-size: var(--small-font-size);
+  top: -12px;
+}
+
+.login-input:not(:placeholder-shown).login-input:not(:focus) {
+  font-size: var(--small-font-size);
+  top: -12px;
 }
